@@ -12,6 +12,16 @@ You cannot have all the files copied to 2 volumes when one volume reference a di
 
 ## example
 
+### docker-compose
+
+```yml
+services:
+    ...
+    volumes:
+      - ./export/:/data/output/
+      - ./include/:/data/output/include/
+```
+### output
 ```sh
 Building test
 [+] Building 3.6s (8/8) FINISHED
