@@ -20,8 +20,10 @@ services:
     volumes:
       - ./export/:/data/output/
       - ./include/:/data/output/include/
+      - ./exclude/:/data/output/exclude/
 ```
 ### output
+
 ```sh
 $ ./test.sh
 Cleaning up the output directories
@@ -50,18 +52,42 @@ test_1  | └── include/
 test_1  |     ├── include_issues_2022-09-01_16:33:55.csv
 test_1  |     └── include_success_2022-09-01_16:33:55.csv
 docker-volume-test_test_1 exited with code 0
-listing files under ./export
+
+> listing files under ./export
 ./export
 ├── exclude
-│   ├── exclude_issues_2022-09-01_16:33:55.csv
-│   └── exclude_success_2022-09-01_16:33:55.csv
 └── include
 
-2 directories, 2 files
-listing files under ./include
+2 directories, 0 files
+
+> listing files under ./include
 ./include
-├── include_issues_2022-09-01_16:33:55.csv
-└── include_success_2022-09-01_16:33:55.csv
+├── include_issues_2022-09-02_08:02:01.csv
+└── include_success_2022-09-02_08:02:01.csv
 
 0 directories, 2 files
+
+> listing files under ./exclude
+./exclude
+├── exclude_issues_2022-09-02_08:02:01.csv
+└── exclude_success_2022-09-02_08:02:01.csv
+
+0 directories, 2 files
+
+> copying files from ./include to ./export/include
+
+> copying files from ./exclude to ./export/exclude
+
+> re-listing files under ./export
+./export
+├── exclude
+│   └── exclude
+│       ├── exclude_issues_2022-09-02_08:02:01.csv
+│       └── exclude_success_2022-09-02_08:02:01.csv
+└── include
+    └── include
+        ├── include_issues_2022-09-02_08:02:01.csv
+        └── include_success_2022-09-02_08:02:01.csv
+
+4 directories, 4 files
 ```
