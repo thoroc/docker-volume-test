@@ -1,6 +1,6 @@
 # docker-volume-test
 
-Using `docker` and `docker-compose` (you need to install that locally on your machine), we are exploring the volume mount. Please ensure that you have `tree` installed on your machine as well.
+Using `docker` and `docker-compose` (you need to install that locally on your machine), we are exploring the volume mount.
 
 ## running
 
