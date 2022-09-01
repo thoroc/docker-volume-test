@@ -9,7 +9,4 @@ COPY . /
 
 WORKDIR /
 
-RUN pip install -r requirements.txt
-
-
 ENTRYPOINT [ "python3", "./test.py" ]

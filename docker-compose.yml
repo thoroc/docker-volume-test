@@ -2,9 +2,7 @@ version: "3.9"
 
 services:
   test:
-    build:
-      context: .
-      dockerfile: test.Dockerfile
+    build: .
     volumes:
       - ./export/:/data/output/
       - ./include/:/data/output/include/
