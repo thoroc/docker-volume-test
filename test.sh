@@ -1,5 +1,9 @@
 #!/bin/sh
 
+echo "Cleaning up the output directories"
+rm -fr export/
+rm -fr include/
+
 docker-compose build
 
 docker-compose up
